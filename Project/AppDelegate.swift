@@ -8,6 +8,10 @@
 
 import UIKit
 import CoreData
+import IQKeyboardManagerSwift
+import Siren
+import SwiftyBeaver
+import MagicalRecord
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -16,7 +20,22 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
-        // Override point for customization after application launch.
+        
+        // SwiftyBeaver log setup
+        let console = ConsoleDestination()
+        log.addDestination(console)
+        log.info(Helper.documentDirectory)
+        
+        // Siren setup
+        Siren.shared.checkVersion(checkType: .daily)
+        
+        // IQKeyboardManager
+        IQKeyboardManager.sharedManager().enable = true
+        
+        // MagicalRecord
+        MagicalRecord.setupCoreDataStack()
+        MagicalRecord.setLoggingLevel(.off)
+        
         return true
     }
 
@@ -36,10 +55,15 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func applicationDidBecomeActive(_ application: UIApplication) {
         // Restart any tasks that were paused (or not yet started) while the application was inactive. If the application was previously in the background, optionally refresh the user interface.
+    
+        // Siren setup
+        Siren.shared.checkVersion(checkType: .daily)
     }
 
     func applicationWillTerminate(_ application: UIApplication) {
         // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
+        
+        MagicalRecord.cleanUp()
         // Saves changes in the application's managed object context before the application terminates.
         self.saveContext()
     }
