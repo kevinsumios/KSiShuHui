@@ -7,7 +7,7 @@ target 'Project' do
 
   # Pods for Project
   pod 'Alamofire'
-  pod 'Google/Analytics'
+  #pod 'Google/Analytics'
   pod 'IQKeyboardManagerSwift'
   pod 'MagicalRecord'
   pod 'Siren'
