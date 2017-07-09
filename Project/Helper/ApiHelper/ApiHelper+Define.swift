@@ -13,6 +13,9 @@ extension ApiHelper {
     enum Name: String {
         case baseUrl // baseUrl is required, do not remove
         case version
+        case getBook
+        case getChapter
+        case readBook
     }
     
     // Update the defaultEnv if you edit the Env enum

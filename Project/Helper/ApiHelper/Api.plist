@@ -7,11 +7,15 @@
 	<key>baseUrl</key>
 	<dict>
 		<key>prod</key>
-		<string>this/is/a/prod/api/</string>
+		<string>http://www.ishuhui.net/ComicBooks/</string>
 		<key>dev</key>
-		<string>this/is/a/dev/api/</string>
+		<string>http://www.ishuhui.net/ComicBooks/</string>
 	</dict>
-	<key>query</key>
-	<string>query_without_base_url</string>
+	<key>getBook</key>
+	<string>GetAllBook</string>
+	<key>getChapter</key>
+	<string>GetChapterList</string>
+	<key>readBook</key>
+	<string>ReadComicBooksToIsoV1</string>
 </dict>
 </plist>
