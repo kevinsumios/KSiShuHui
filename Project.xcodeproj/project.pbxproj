@@ -12,6 +12,8 @@
 		4B7277991F12A021009AC306 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B7277981F12A021009AC306 /* BaseViewController.swift */; };
 		4B72779F1F12A495009AC306 /* CategoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B72779E1F12A495009AC306 /* CategoryViewController.swift */; };
 		4B7277A11F12A79B009AC306 /* UpdateViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B7277A01F12A79B009AC306 /* UpdateViewController.swift */; };
+		4B7277A51F12B261009AC306 /* CategoryTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B7277A41F12B261009AC306 /* CategoryTableViewCell.swift */; };
+		4B7277AA1F13F1C4009AC306 /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B7277A91F13F1C4009AC306 /* TabBarController.swift */; };
 		4B9F7DDA1EEEF8FC009C13A5 /* Helper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B9F7DD91EEEF8FC009C13A5 /* Helper.swift */; };
 		4B9F7DDC1EEEF932009C13A5 /* Config.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B9F7DDB1EEEF932009C13A5 /* Config.swift */; };
 		4BA6EE0D1EE87B7B0098C4DA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BA6EE0C1EE87B7B0098C4DA /* AppDelegate.swift */; };
@@ -24,6 +26,9 @@
 		4BDF650A1F124471003230A1 /* ApiHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BDF65091F124471003230A1 /* ApiHelper.swift */; };
 		4BDF650C1F124531003230A1 /* ApiHelper+Define.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BDF650B1F124531003230A1 /* ApiHelper+Define.swift */; };
 		4BDF650E1F124559003230A1 /* Api.plist in Resources */ = {isa = PBXBuildFile; fileRef = 4BDF650D1F124559003230A1 /* Api.plist */; };
+		4BFEAED51F13FD5500762920 /* BookChapterHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BFEAED41F13FD5500762920 /* BookChapterHeaderView.swift */; };
+		4BFEAED71F13FEAF00762920 /* BookChapterTableController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BFEAED61F13FEAF00762920 /* BookChapterTableController.swift */; };
+		4BFEAED91F14085600762920 /* BookChapterViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BFEAED81F14085600762920 /* BookChapterViewCell.swift */; };
 		D6E23533625F01DF2362EDA5 /* Pods_ProjectUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 035D8FECAAA5489CFB508348 /* Pods_ProjectUITests.framework */; };
 /* End PBXBuildFile section */
 
@@ -52,6 +57,8 @@
 		4B7277981F12A021009AC306 /* BaseViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
 		4B72779E1F12A495009AC306 /* CategoryViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CategoryViewController.swift; sourceTree = "<group>"; };
 		4B7277A01F12A79B009AC306 /* UpdateViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UpdateViewController.swift; sourceTree = "<group>"; };
+		4B7277A41F12B261009AC306 /* CategoryTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CategoryTableViewCell.swift; sourceTree = "<group>"; };
+		4B7277A91F13F1C4009AC306 /* TabBarController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
 		4B9F7DD91EEEF8FC009C13A5 /* Helper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Helper.swift; sourceTree = "<group>"; };
 		4B9F7DDB1EEEF932009C13A5 /* Config.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Config.swift; sourceTree = "<group>"; };
 		4BA6EE091EE87B7B0098C4DA /* Project.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Project.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -70,6 +77,9 @@
 		4BDF65091F124471003230A1 /* ApiHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ApiHelper.swift; sourceTree = "<group>"; };
 		4BDF650B1F124531003230A1 /* ApiHelper+Define.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "ApiHelper+Define.swift"; sourceTree = "<group>"; };
 		4BDF650D1F124559003230A1 /* Api.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Api.plist; sourceTree = "<group>"; };
+		4BFEAED41F13FD5500762920 /* BookChapterHeaderView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BookChapterHeaderView.swift; sourceTree = "<group>"; };
+		4BFEAED61F13FEAF00762920 /* BookChapterTableController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BookChapterTableController.swift; sourceTree = "<group>"; };
+		4BFEAED81F14085600762920 /* BookChapterViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BookChapterViewCell.swift; sourceTree = "<group>"; };
 		4CFCA356A8701324A1BD2778 /* Pods-Project.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Project.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Project/Pods-Project.debug.xcconfig"; sourceTree = "<group>"; };
 		6E047641F8B24AB1302365AC /* Pods_ProjectTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ProjectTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		92D5C8498458D10B2B69F617 /* Pods-ProjectUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ProjectUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-ProjectUITests/Pods-ProjectUITests.release.xcconfig"; sourceTree = "<group>"; };
@@ -163,7 +173,9 @@
 			isa = PBXGroup;
 			children = (
 				4B7277981F12A021009AC306 /* BaseViewController.swift */,
+				4BFEAED61F13FEAF00762920 /* BookChapterTableController.swift */,
 				4B72779E1F12A495009AC306 /* CategoryViewController.swift */,
+				4B7277A91F13F1C4009AC306 /* TabBarController.swift */,
 				4B7277A01F12A79B009AC306 /* UpdateViewController.swift */,
 			);
 			path = Controller;
@@ -190,6 +202,9 @@
 		4BA6EE841EE87D8E0098C4DA /* View */ = {
 			isa = PBXGroup;
 			children = (
+				4BFEAED41F13FD5500762920 /* BookChapterHeaderView.swift */,
+				4BFEAED81F14085600762920 /* BookChapterViewCell.swift */,
+				4B7277A41F12B261009AC306 /* CategoryTableViewCell.swift */,
 				4BA6EE851EE87D8E0098C4DA /* LaunchScreen.storyboard */,
 				4BA6EE861EE87D8E0098C4DA /* Main.storyboard */,
 			);
@@ -511,12 +526,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4BFEAED51F13FD5500762920 /* BookChapterHeaderView.swift in Sources */,
 				4BDF650A1F124471003230A1 /* ApiHelper.swift in Sources */,
 				4BA6EE0D1EE87B7B0098C4DA /* AppDelegate.swift in Sources */,
+				4B7277AA1F13F1C4009AC306 /* TabBarController.swift in Sources */,
 				4B9F7DDC1EEEF932009C13A5 /* Config.swift in Sources */,
 				4BA6EE831EE87D730098C4DA /* Project.xcdatamodeld in Sources */,
 				4B7277991F12A021009AC306 /* BaseViewController.swift in Sources */,
+				4B7277A51F12B261009AC306 /* CategoryTableViewCell.swift in Sources */,
 				4B9F7DDA1EEEF8FC009C13A5 /* Helper.swift in Sources */,
+				4BFEAED91F14085600762920 /* BookChapterViewCell.swift in Sources */,
+				4BFEAED71F13FEAF00762920 /* BookChapterTableController.swift in Sources */,
 				4B72779F1F12A495009AC306 /* CategoryViewController.swift in Sources */,
 				4BDF650C1F124531003230A1 /* ApiHelper+Define.swift in Sources */,
 				4B7277A11F12A79B009AC306 /* UpdateViewController.swift in Sources */,

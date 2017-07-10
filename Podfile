@@ -7,10 +7,12 @@ target 'Project' do
 
   # Pods for Project
   pod 'Alamofire'
+  pod 'FontAwesome.swift'
   #pod 'Google/Analytics'
   pod 'IQKeyboardManagerSwift'
   pod 'MagicalRecord'
   pod 'Siren'
+  pod 'SDWebImage'
   pod 'SwiftyBeaver'
   pod 'SwiftyJSON'
   pod 'SwiftyTimer'

@@ -8,30 +8,44 @@
 
 import UIKit
 import Alamofire
+import FontAwesome_swift
 import SwiftyJSON
 
-class CategoryViewController: UITableViewController {
+class CategoryViewController: BaseViewController {
     
-    var data = [JSON("")]
+    var data: [JSON] = []
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        let parameter: Parameters =
-            ["ClassifyId":3,
-             "Size":30]
+        // Layout
+        self.tableView.tableFooterView = UIView(frame: .zero)
+        // Api
+        let parameter: Parameters = ["ClassifyId":3, "Size":30]
         ApiHelper.shared.request(
             name: .getBook,
             parameters: parameter,
             success: { (json, response) in
                 if let array = json.dictionary?["Return"]?.dictionary?["List"]?.array {
                     self.data = array
-                    log.verbose(self.data)
+                    self.tableView.reloadData()
                 }
-                log.verbose(self.data)
-                self.tableView.reloadData()
         },
             failure: nil)
     }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "bookChapterTable", let table = segue.destination as? BookChapterTableController {
+            if let selectedRow = tableView.indexPathForSelectedRow?.row {
+                let book = data[selectedRow].dictionary
+                table.cover = book?["FrontCover"]?.string
+                table.name = book?["Title"]?.string
+                table.author = book?["Author"]?.string
+                table.status = book?["SerializedState"]?.string
+                table.id = book?["Id"]?.int ?? 0
+            }
+        }
+    }
+    
     // MARK: - Table view data source
 
     override func numberOfSections(in tableView: UITableView) -> Int {
@@ -43,60 +57,22 @@ class CategoryViewController: UITableViewController {
     }
 
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "categoryId", for: indexPath)
+        let cell = tableView.dequeueReusableCell(withIdentifier: "categoryId", for: indexPath) as! CategoryTableViewCell
         if let book = data[indexPath.row].dictionary {
-            let title = book["Title"]?.string
-            let author = book["Author"]?.string
-            let explain = book["Explain"]?.string
-            let chapter = book["LastCHapter"]?.dictionary?["Sort"]?.string
-            cell.textLabel?.text = title
+            let title = book["Title"]?.string ?? ""
+            let author = book["Author"]?.string ?? ""
+            cell.title = "\(title) \(author)"
+            if let chapter = book["LastChapter"]?.dictionary?["Sort"]?.int {
+                cell.chapter = "第\(chapter)話"
+            }
+            cell.explain = book["Explain"]?.string
+            cell.cover = book["FrontCover"]?.string
         }
         return cell
     }
-
-    /*
-    // Override to support conditional editing of the table view.
-    override func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
-        // Return false if you do not want the specified item to be editable.
-        return true
+    
+    override func tableView(_ tableView: UITableView, heightForFooterInSection section: Int) -> CGFloat {
+        return tabBarController?.tabBar.frame.height ?? 42
     }
-    */
-
-    /*
-    // Override to support editing the table view.
-    override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
-        if editingStyle == .delete {
-            // Delete the row from the data source
-            tableView.deleteRows(at: [indexPath], with: .fade)
-        } else if editingStyle == .insert {
-            // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
-        }    
-    }
-    */
-
-    /*
-    // Override to support rearranging the table view.
-    override func tableView(_ tableView: UITableView, moveRowAt fromIndexPath: IndexPath, to: IndexPath) {
-
-    }
-    */
-
-    /*
-    // Override to support conditional rearranging of the table view.
-    override func tableView(_ tableView: UITableView, canMoveRowAt indexPath: IndexPath) -> Bool {
-        // Return false if you do not want the item to be re-orderable.
-        return true
-    }
-    */
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
 
 }
