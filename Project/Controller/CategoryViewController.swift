@@ -18,7 +18,9 @@ class CategoryViewController: BaseViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Layout
-        self.tableView.tableFooterView = UIView(frame: .zero)
+        let footer = UIView(frame: CGRect(origin: .zero, size: CGSize(width: self.tableView.frame.width, height: tabBarController?.tabBar.frame.height ?? 42)))
+        footer.backgroundColor = .white
+        self.tableView.tableFooterView = footer
         // Api
         let parameter: Parameters = ["ClassifyId":3, "Size":30]
         ApiHelper.shared.request(
@@ -71,8 +73,4 @@ class CategoryViewController: BaseViewController {
         return cell
     }
     
-    override func tableView(_ tableView: UITableView, heightForFooterInSection section: Int) -> CGFloat {
-        return tabBarController?.tabBar.frame.height ?? 42
-    }
-
 }

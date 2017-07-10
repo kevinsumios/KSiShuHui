@@ -61,14 +61,14 @@
 		4B7277A91F13F1C4009AC306 /* TabBarController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
 		4B9F7DD91EEEF8FC009C13A5 /* Helper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Helper.swift; sourceTree = "<group>"; };
 		4B9F7DDB1EEEF932009C13A5 /* Config.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Config.swift; sourceTree = "<group>"; };
-		4BA6EE091EE87B7B0098C4DA /* Project.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Project.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		4BA6EE091EE87B7B0098C4DA /* KSiShuHui.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = KSiShuHui.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4BA6EE0C1EE87B7B0098C4DA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		4BA6EE161EE87B7B0098C4DA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		4BA6EE1B1EE87B7B0098C4DA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		4BA6EE201EE87B7B0098C4DA /* ProjectTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ProjectTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		4BA6EE201EE87B7B0098C4DA /* KSiShuHuiTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = KSiShuHuiTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		4BA6EE241EE87B7B0098C4DA /* ProjectTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectTests.swift; sourceTree = "<group>"; };
 		4BA6EE261EE87B7B0098C4DA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		4BA6EE2B1EE87B7B0098C4DA /* ProjectUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ProjectUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		4BA6EE2B1EE87B7B0098C4DA /* KSiShuHuiUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = KSiShuHuiUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		4BA6EE2F1EE87B7B0098C4DA /* ProjectUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectUITests.swift; sourceTree = "<group>"; };
 		4BA6EE311EE87B7B0098C4DA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4BA6EE821EE87D730098C4DA /* Project.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Project.xcdatamodel; sourceTree = "<group>"; };
@@ -130,9 +130,9 @@
 		4BA6EE0A1EE87B7B0098C4DA /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				4BA6EE091EE87B7B0098C4DA /* Project.app */,
-				4BA6EE201EE87B7B0098C4DA /* ProjectTests.xctest */,
-				4BA6EE2B1EE87B7B0098C4DA /* ProjectUITests.xctest */,
+				4BA6EE091EE87B7B0098C4DA /* KSiShuHui.app */,
+				4BA6EE201EE87B7B0098C4DA /* KSiShuHuiTests.xctest */,
+				4BA6EE2B1EE87B7B0098C4DA /* KSiShuHuiUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -247,9 +247,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		4BA6EE081EE87B7B0098C4DA /* Project */ = {
+		4BA6EE081EE87B7B0098C4DA /* KSiShuHui */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 4BA6EE341EE87B7B0098C4DA /* Build configuration list for PBXNativeTarget "Project" */;
+			buildConfigurationList = 4BA6EE341EE87B7B0098C4DA /* Build configuration list for PBXNativeTarget "KSiShuHui" */;
 			buildPhases = (
 				6D7AA5B64D450DCC6351DA1C /* [CP] Check Pods Manifest.lock */,
 				4BA6EE051EE87B7B0098C4DA /* Sources */,
@@ -262,14 +262,14 @@
 			);
 			dependencies = (
 			);
-			name = Project;
+			name = KSiShuHui;
 			productName = Project;
-			productReference = 4BA6EE091EE87B7B0098C4DA /* Project.app */;
+			productReference = 4BA6EE091EE87B7B0098C4DA /* KSiShuHui.app */;
 			productType = "com.apple.product-type.application";
 		};
-		4BA6EE1F1EE87B7B0098C4DA /* ProjectTests */ = {
+		4BA6EE1F1EE87B7B0098C4DA /* KSiShuHuiTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 4BA6EE371EE87B7B0098C4DA /* Build configuration list for PBXNativeTarget "ProjectTests" */;
+			buildConfigurationList = 4BA6EE371EE87B7B0098C4DA /* Build configuration list for PBXNativeTarget "KSiShuHuiTests" */;
 			buildPhases = (
 				C9FE43C32F733A0A951A3917 /* [CP] Check Pods Manifest.lock */,
 				4BA6EE1C1EE87B7B0098C4DA /* Sources */,
@@ -283,14 +283,14 @@
 			dependencies = (
 				4BA6EE221EE87B7B0098C4DA /* PBXTargetDependency */,
 			);
-			name = ProjectTests;
+			name = KSiShuHuiTests;
 			productName = ProjectTests;
-			productReference = 4BA6EE201EE87B7B0098C4DA /* ProjectTests.xctest */;
+			productReference = 4BA6EE201EE87B7B0098C4DA /* KSiShuHuiTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
-		4BA6EE2A1EE87B7B0098C4DA /* ProjectUITests */ = {
+		4BA6EE2A1EE87B7B0098C4DA /* KSiShuHuiUITests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 4BA6EE3A1EE87B7B0098C4DA /* Build configuration list for PBXNativeTarget "ProjectUITests" */;
+			buildConfigurationList = 4BA6EE3A1EE87B7B0098C4DA /* Build configuration list for PBXNativeTarget "KSiShuHuiUITests" */;
 			buildPhases = (
 				37860EF2D116275CEFD40838 /* [CP] Check Pods Manifest.lock */,
 				4BA6EE271EE87B7B0098C4DA /* Sources */,
@@ -304,9 +304,9 @@
 			dependencies = (
 				4BA6EE2D1EE87B7B0098C4DA /* PBXTargetDependency */,
 			);
-			name = ProjectUITests;
+			name = KSiShuHuiUITests;
 			productName = ProjectUITests;
-			productReference = 4BA6EE2B1EE87B7B0098C4DA /* ProjectUITests.xctest */;
+			productReference = 4BA6EE2B1EE87B7B0098C4DA /* KSiShuHuiUITests.xctest */;
 			productType = "com.apple.product-type.bundle.ui-testing";
 		};
 /* End PBXNativeTarget section */
@@ -321,6 +321,7 @@
 				TargetAttributes = {
 					4BA6EE081EE87B7B0098C4DA = {
 						CreatedOnToolsVersion = 8.3.2;
+						DevelopmentTeam = L83GZJQVEH;
 						ProvisioningStyle = Automatic;
 					};
 					4BA6EE1F1EE87B7B0098C4DA = {
@@ -335,7 +336,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 4BA6EE041EE87B7B0098C4DA /* Build configuration list for PBXProject "Project" */;
+			buildConfigurationList = 4BA6EE041EE87B7B0098C4DA /* Build configuration list for PBXProject "KSiShuHui" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -348,9 +349,9 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				4BA6EE081EE87B7B0098C4DA /* Project */,
-				4BA6EE1F1EE87B7B0098C4DA /* ProjectTests */,
-				4BA6EE2A1EE87B7B0098C4DA /* ProjectUITests */,
+				4BA6EE081EE87B7B0098C4DA /* KSiShuHui */,
+				4BA6EE1F1EE87B7B0098C4DA /* KSiShuHuiTests */,
+				4BA6EE2A1EE87B7B0098C4DA /* KSiShuHuiUITests */,
 			);
 		};
 /* End PBXProject section */
@@ -564,12 +565,12 @@
 /* Begin PBXTargetDependency section */
 		4BA6EE221EE87B7B0098C4DA /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 4BA6EE081EE87B7B0098C4DA /* Project */;
+			target = 4BA6EE081EE87B7B0098C4DA /* KSiShuHui */;
 			targetProxy = 4BA6EE211EE87B7B0098C4DA /* PBXContainerItemProxy */;
 		};
 		4BA6EE2D1EE87B7B0098C4DA /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 4BA6EE081EE87B7B0098C4DA /* Project */;
+			target = 4BA6EE081EE87B7B0098C4DA /* KSiShuHui */;
 			targetProxy = 4BA6EE2C1EE87B7B0098C4DA /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
@@ -675,9 +676,10 @@
 			baseConfigurationReference = 4CFCA356A8701324A1BD2778 /* Pods-Project.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = L83GZJQVEH;
 				INFOPLIST_FILE = Project/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.kevinsum.template.Project;
+				PRODUCT_BUNDLE_IDENTIFIER = com.kevinsum.KSiShuHui;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
 			};
@@ -688,9 +690,10 @@
 			baseConfigurationReference = 045576E0DC50DBB749868C98 /* Pods-Project.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = L83GZJQVEH;
 				INFOPLIST_FILE = Project/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.kevinsum.template.Project;
+				PRODUCT_BUNDLE_IDENTIFIER = com.kevinsum.KSiShuHui;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
 			};
@@ -707,7 +710,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.kevinsum.template.ProjectTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Project.app/Project";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/KSiShuHui.app/KSiShuHui";
 			};
 			name = Debug;
 		};
@@ -722,7 +725,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.kevinsum.template.ProjectTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Project.app/Project";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/KSiShuHui.app/KSiShuHui";
 			};
 			name = Release;
 		};
@@ -757,7 +760,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		4BA6EE041EE87B7B0098C4DA /* Build configuration list for PBXProject "Project" */ = {
+		4BA6EE041EE87B7B0098C4DA /* Build configuration list for PBXProject "KSiShuHui" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				4BA6EE321EE87B7B0098C4DA /* Debug */,
@@ -766,7 +769,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		4BA6EE341EE87B7B0098C4DA /* Build configuration list for PBXNativeTarget "Project" */ = {
+		4BA6EE341EE87B7B0098C4DA /* Build configuration list for PBXNativeTarget "KSiShuHui" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				4BA6EE351EE87B7B0098C4DA /* Debug */,
@@ -775,7 +778,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		4BA6EE371EE87B7B0098C4DA /* Build configuration list for PBXNativeTarget "ProjectTests" */ = {
+		4BA6EE371EE87B7B0098C4DA /* Build configuration list for PBXNativeTarget "KSiShuHuiTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				4BA6EE381EE87B7B0098C4DA /* Debug */,
@@ -784,7 +787,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		4BA6EE3A1EE87B7B0098C4DA /* Build configuration list for PBXNativeTarget "ProjectUITests" */ = {
+		4BA6EE3A1EE87B7B0098C4DA /* Build configuration list for PBXNativeTarget "KSiShuHuiUITests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				4BA6EE3B1EE87B7B0098C4DA /* Debug */,
