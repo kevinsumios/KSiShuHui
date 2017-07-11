@@ -29,6 +29,7 @@
 		4BFEAED51F13FD5500762920 /* BookChapterHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BFEAED41F13FD5500762920 /* BookChapterHeaderView.swift */; };
 		4BFEAED71F13FEAF00762920 /* BookChapterTableController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BFEAED61F13FEAF00762920 /* BookChapterTableController.swift */; };
 		4BFEAED91F14085600762920 /* BookChapterViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BFEAED81F14085600762920 /* BookChapterViewCell.swift */; };
+		4BFEAEDB1F15372F00762920 /* ReadBookController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BFEAEDA1F15372F00762920 /* ReadBookController.swift */; };
 		D6E23533625F01DF2362EDA5 /* Pods_ProjectUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 035D8FECAAA5489CFB508348 /* Pods_ProjectUITests.framework */; };
 /* End PBXBuildFile section */
 
@@ -80,6 +81,7 @@
 		4BFEAED41F13FD5500762920 /* BookChapterHeaderView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BookChapterHeaderView.swift; sourceTree = "<group>"; };
 		4BFEAED61F13FEAF00762920 /* BookChapterTableController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BookChapterTableController.swift; sourceTree = "<group>"; };
 		4BFEAED81F14085600762920 /* BookChapterViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BookChapterViewCell.swift; sourceTree = "<group>"; };
+		4BFEAEDA1F15372F00762920 /* ReadBookController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReadBookController.swift; sourceTree = "<group>"; };
 		4CFCA356A8701324A1BD2778 /* Pods-Project.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Project.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Project/Pods-Project.debug.xcconfig"; sourceTree = "<group>"; };
 		6E047641F8B24AB1302365AC /* Pods_ProjectTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ProjectTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		92D5C8498458D10B2B69F617 /* Pods-ProjectUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ProjectUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-ProjectUITests/Pods-ProjectUITests.release.xcconfig"; sourceTree = "<group>"; };
@@ -175,6 +177,7 @@
 				4B7277981F12A021009AC306 /* BaseViewController.swift */,
 				4BFEAED61F13FEAF00762920 /* BookChapterTableController.swift */,
 				4B72779E1F12A495009AC306 /* CategoryViewController.swift */,
+				4BFEAEDA1F15372F00762920 /* ReadBookController.swift */,
 				4B7277A91F13F1C4009AC306 /* TabBarController.swift */,
 				4B7277A01F12A79B009AC306 /* UpdateViewController.swift */,
 			);
@@ -537,6 +540,7 @@
 				4B7277A51F12B261009AC306 /* CategoryTableViewCell.swift in Sources */,
 				4B9F7DDA1EEEF8FC009C13A5 /* Helper.swift in Sources */,
 				4BFEAED91F14085600762920 /* BookChapterViewCell.swift in Sources */,
+				4BFEAEDB1F15372F00762920 /* ReadBookController.swift in Sources */,
 				4BFEAED71F13FEAF00762920 /* BookChapterTableController.swift in Sources */,
 				4B72779F1F12A495009AC306 /* CategoryViewController.swift in Sources */,
 				4BDF650C1F124531003230A1 /* ApiHelper+Define.swift in Sources */,

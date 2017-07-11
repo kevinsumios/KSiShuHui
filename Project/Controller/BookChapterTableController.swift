@@ -71,4 +71,14 @@ class BookChapterTableController: BaseViewController {
         return cell
     }
     
+    // MARK: - Navigation
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "readBook", let readController = segue.destination as? ReadBookController {
+            if let selectedRow = tableView.indexPathForSelectedRow?.row {
+                readController.id = data[selectedRow].dictionary?["Id"]?.int
+            }
+        }
+    }
+    
 }
