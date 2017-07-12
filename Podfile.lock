@@ -5,6 +5,7 @@ PODS:
   - MagicalRecord (2.3.2):
     - MagicalRecord/Core (= 2.3.2)
   - MagicalRecord/Core (2.3.2)
+  - MJRefresh (3.1.12)
   - SDWebImage (4.0.0):
     - SDWebImage/Core (= 4.0.0)
   - SDWebImage/Core (4.0.0)
@@ -18,6 +19,7 @@ DEPENDENCIES:
   - FontAwesome.swift
   - IQKeyboardManagerSwift
   - MagicalRecord
+  - MJRefresh
   - SDWebImage
   - Siren
   - SwiftyBeaver
@@ -29,12 +31,13 @@ SPEC CHECKSUMS:
   FontAwesome.swift: 60063e3f19ba4801155d4b0f2334ab7585763ab3
   IQKeyboardManagerSwift: 2eefe6c429b86aa08bfbc1b5c891164d754adf91
   MagicalRecord: 53bed74b4323b930992a725be713e53b37d19755
+  MJRefresh: b96cdb21c4aa75a7b07654311ab2f315c497e806
   SDWebImage: 76a6348bdc74eb5a55dd08a091ef298e56b55e41
   Siren: 33994aad31aab24344689b3a918d0a9d9eede2e2
   SwiftyBeaver: 90a39e3dc5136b7285f2e4c870b107e3933b8b84
   SwiftyJSON: c2842d878f95482ffceec5709abc3d05680c0220
   SwiftyTimer: 2efd74b060d69ad4f1496baf5bbedbe132125fcf
 
-PODFILE CHECKSUM: 9ea52804d481279239b3523b12af367a7295bb87
+PODFILE CHECKSUM: cf07940304bff30e459601eccd1383a3d8a74bf5
 
 COCOAPODS: 1.1.1
