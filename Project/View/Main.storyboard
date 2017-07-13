@@ -17,7 +17,7 @@
             <objects>
                 <tabBarController id="Hee-3U-Vve" customClass="TabBarController" customModule="KSiShuHui" customModuleProvider="target" sceneMemberID="viewController">
                     <navigationItem key="navigationItem" id="6L4-8Y-LpQ"/>
-                    <tabBar key="tabBar" contentMode="scaleToFill" id="VTS-wC-RAL">
+                    <tabBar key="tabBar" contentMode="scaleToFill" translucent="NO" id="VTS-wC-RAL">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="49"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
@@ -36,7 +36,7 @@
             <objects>
                 <tableViewController id="leo-kH-3Do" customClass="UpdateViewController" customModule="KSiShuHui" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="RR1-8a-SM6">
-                        <rect key="frame" x="0.0" y="64" width="375" height="603"/>
+                        <rect key="frame" x="0.0" y="64" width="375" height="554"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
@@ -64,7 +64,7 @@
         <scene sceneID="Ggy-nh-IIK">
             <objects>
                 <navigationController id="sFO-gh-bFA" sceneMemberID="viewController">
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" translucent="NO" id="ALR-OS-Idf">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" translucent="NO" id="ALR-OS-Idf">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
@@ -81,7 +81,7 @@
             <objects>
                 <tableViewController id="VeO-Qp-k5T" customClass="CategoryViewController" customModule="KSiShuHui" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="80" sectionHeaderHeight="28" sectionFooterHeight="28" id="qa9-zY-oBu">
-                        <rect key="frame" x="0.0" y="64" width="375" height="603"/>
+                        <rect key="frame" x="0.0" y="64" width="375" height="554"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
@@ -157,7 +157,7 @@
             <objects>
                 <tableViewController id="oU9-N5-tya" customClass="BookChapterTableController" customModule="KSiShuHui" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="60" sectionHeaderHeight="28" sectionFooterHeight="28" id="wUM-9D-Wu4">
-                        <rect key="frame" x="0.0" y="64" width="375" height="603"/>
+                        <rect key="frame" x="0.0" y="64" width="375" height="554"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <view key="tableHeaderView" contentMode="scaleToFill" id="1i0-CY-Jf0" customClass="BookChapterHeaderView" customModule="KSiShuHui" customModuleProvider="target">
@@ -280,7 +280,7 @@
                         <viewControllerLayoutGuide type="bottom" id="1Wk-ey-ryd"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="KtH-96-Wri">
-                        <rect key="frame" x="0.0" y="64" width="375" height="603"/>
+                        <rect key="frame" x="0.0" y="64" width="375" height="554"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>

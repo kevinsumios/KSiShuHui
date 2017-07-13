@@ -15,12 +15,12 @@ class TabBarController: UITabBarController {
         super.viewDidLoad()
         if let item1 = tabBar.items?[0] {
             item1.image = UIImage.fontAwesomeIcon(name: .refresh, textColor: .gray, size: CGSize(width: 30, height: 30))
-            item1.title = "更新"
+            item1.title = "本週新番"
         }
         if let item2 = tabBar.items?[1] {
             item2.image = UIImage.fontAwesomeIcon(name: .starO, textColor: .gray, size: CGSize(width: 30, height: 30))
             item2.selectedImage = UIImage.fontAwesomeIcon(name: .star, textColor: .gray, size: CGSize(width: 30, height: 30))
-            item2.title = "列表"
+            item2.title = "漫畫列表"
         }
     }
 

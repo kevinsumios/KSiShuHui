@@ -34,7 +34,7 @@ class BookChapterViewCell: UITableViewCell {
     
     var cover: String? {
         didSet {
-            let placeHolder = UIImage.fontAwesomeIcon(name: .image, textColor: .black, size: CGSize(width: 30, height: 30))
+            let placeHolder = UIImage.fontAwesomeIcon(name: .starO, textColor: .gray, size: CGSize(width: 30, height: 30))
             if let url = cover {
                 coverImageView.sd_setImage(with: URL(string: url), placeholderImage: placeHolder)
             }

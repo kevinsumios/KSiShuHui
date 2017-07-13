@@ -7,57 +7,22 @@
 //
 
 import UIKit
-import Alamofire
-import FontAwesome_swift
-import SwiftyJSON
 
-class CategoryViewController: BaseViewController {
+class CategoryViewController: BaseTableController {
     
-    var data: [JSON] = []
-
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        // Layout
-        let footer = UIView(frame: CGRect(origin: .zero, size: CGSize(width: self.tableView.frame.width, height: tabBarController?.tabBar.frame.height ?? 42)))
-        footer.backgroundColor = .white
-        self.tableView.tableFooterView = footer
-        // Api
-        let parameter: Parameters = ["ClassifyId":3, "Size":30]
-        ApiHelper.shared.request(
-            name: .getBook,
-            parameters: parameter,
-            success: { (json, response) in
-                if let array = json.dictionary?["Return"]?.dictionary?["List"]?.array {
-                    self.data = array
-                    self.tableView.reloadData()
-                }
-        },
-            failure: nil)
+    override func loadView() {
+        super.loadView()
+        api = ApiHelper.Name.getBook
+        tabBarController?.title = tabBarItem.title
     }
     
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if segue.identifier == "bookChapterTable", let table = segue.destination as? BookChapterTableController {
-            if let selectedRow = tableView.indexPathForSelectedRow?.row {
-                let book = data[selectedRow].dictionary
-                table.cover = book?["FrontCover"]?.string
-                table.name = book?["Title"]?.string
-                table.author = book?["Author"]?.string
-                table.status = book?["SerializedState"]?.string
-                table.id = book?["Id"]?.int ?? 0
-            }
-        }
+    override func loadData() {
+        parameter = ["ClassifyId":3, "PageIndex":index]
+        super.loadData()
     }
     
     // MARK: - Table view data source
-
-    override func numberOfSections(in tableView: UITableView) -> Int {
-        return 1
-    }
-
-    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return data.count
-    }
-
+    
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "categoryId", for: indexPath) as! CategoryTableViewCell
         if let book = data[indexPath.row].dictionary {
@@ -71,6 +36,21 @@ class CategoryViewController: BaseViewController {
             cell.cover = book["FrontCover"]?.string
         }
         return cell
+    }
+    
+    // MARK: - Navigation
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "bookChapterTable", let table = segue.destination as? BookChapterTableController {
+            if let selectedRow = tableView.indexPathForSelectedRow?.row {
+                let book = data[selectedRow].dictionary
+                table.cover = book?["FrontCover"]?.string
+                table.name = book?["Title"]?.string
+                table.author = book?["Author"]?.string
+                table.status = book?["SerializedState"]?.string
+                table.id = book?["Id"]?.int ?? 0
+            }
+        }
     }
     
 }

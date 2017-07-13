@@ -7,23 +7,24 @@
 //
 
 import UIKit
-import Alamofire
-import SDWebImage
-import SwiftyJSON
 
-class BookChapterTableController: BaseViewController {
+class BookChapterTableController: BaseTableController {
     
     var cover: String?
     var name: String?
     var author: String?
     var status: String?
-    var data: [JSON] = []
     var id = 0
-    var index = 0
-
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        // Layout
+    
+    override func loadView() {
+        super.loadView()
+        api = ApiHelper.Name.getChapter
+        if let nameStr = name {
+            title = nameStr
+        }
+    }
+    
+    override func initLayout() {
         if let headerView = tableView.tableHeaderView as? BookChapterHeaderView {
             headerView.cover = cover
             headerView.title = name
@@ -35,35 +36,20 @@ class BookChapterTableController: BaseViewController {
             }
         }
         self.tableView.tableFooterView = UIView(frame: .zero)
-        // Api
-        let parameter: Parameters = ["id":id, "PageIndex":index]
-        ApiHelper.shared.request(
-            name: .getChapter,
-            parameters: parameter,
-            success: { (json, response) in
-                if let array = json.dictionary?["Return"]?.dictionary?["List"]?.array {
-                    self.data = array
-                    self.tableView.reloadData()
-                }
-        },
-            failure: nil)
+    }
+    
+    override func loadData() {
+        parameter = ["id":id, "PageIndex":index]
+        super.loadData()
     }
 
     // MARK: - Table view data source
-
-    override func numberOfSections(in tableView: UITableView) -> Int {
-        return 1
-    }
-
-    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return data.count
-    }
-    
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "bookChapterId", for: indexPath) as! BookChapterViewCell
         if let chapter = data[indexPath.row].dictionary {
             if let title = name, let chapterNo = chapter["ChapterNo"]?.int {
-                cell.title = "\(title) 第\(chapterNo)話"
+                let chapterType = chapter["ChapterType"]?.int ?? 0
+                cell.title = "\(title) 第\(chapterNo)\(chapterType > 0 ? "卷" : "話")"
             }
             cell.explain = chapter["Title"]?.string
             cell.cover = chapter["FrontCover"]?.string
