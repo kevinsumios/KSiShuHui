@@ -10,6 +10,8 @@ import UIKit
 
 class CategoryViewController: BaseTableController {
     
+    var categoryId = 0
+    
     override func loadView() {
         super.loadView()
         api = ApiHelper.Name.getBook
@@ -17,7 +19,7 @@ class CategoryViewController: BaseTableController {
     }
     
     override func loadData() {
-        parameter = ["ClassifyId":3, "PageIndex":index]
+        parameter = ["ClassifyId":categoryId, "PageIndex":index]
         super.loadData()
     }
     

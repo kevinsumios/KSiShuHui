@@ -8,19 +8,33 @@
 
 import UIKit
 import FontAwesome_swift
+import SwiftyJSON
 
 class TabBarController: UITabBarController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        if let item1 = tabBar.items?[0] {
-            item1.image = UIImage.fontAwesomeIcon(name: .refresh, textColor: .gray, size: CGSize(width: 30, height: 30))
-            item1.title = "本週新番"
-        }
-        if let item2 = tabBar.items?[1] {
-            item2.image = UIImage.fontAwesomeIcon(name: .starO, textColor: .gray, size: CGSize(width: 30, height: 30))
-            item2.selectedImage = UIImage.fontAwesomeIcon(name: .star, textColor: .gray, size: CGSize(width: 30, height: 30))
-            item2.title = "漫畫列表"
+        let categoryConfig = [
+            [
+                "id": 3,
+                "title": "鼠繪漫畫"
+                ],
+            [
+                "id": 4,
+                "title": "熱血漫畫"
+            ]
+        ]
+        var index = 0
+        if let tabControllers = viewControllers {
+            for tabController in tabControllers {
+                if let category = tabController as? CategoryViewController {
+                    category.tabBarItem.image = UIImage.fontAwesomeIcon(name: .starO, textColor: .gray, size: CGSize(width: 30, height: 30))
+                    category.tabBarItem.selectedImage = UIImage.fontAwesomeIcon(name: .star, textColor: .gray, size: CGSize(width: 30, height: 30))
+                    category.tabBarItem.title = categoryConfig[index]["title"] as? String
+                    category.categoryId = categoryConfig[index]["id"] as? Int ?? 0
+                    index += 1
+                }
+            }
         }
     }
 
