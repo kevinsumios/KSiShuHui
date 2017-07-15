@@ -14,8 +14,8 @@ class BookChapterHeaderView: UIView {
     
     @IBOutlet private weak var coverImageView: UIImageView!
     @IBOutlet private weak var titleLabel: UILabel!
-    @IBOutlet private weak var authorLabel: UILabel!
     @IBOutlet private weak var statusLabel: UILabel!
+    @IBOutlet private weak var explainLabel: UILabel!
     
     var title: String? {
         get {
@@ -26,21 +26,21 @@ class BookChapterHeaderView: UIView {
         }
     }
     
-    var author: String? {
-        get {
-            return authorLabel.text
-        }
-        set {
-            authorLabel.text = newValue
-        }
-    }
-    
     var status: String? {
         get {
             return statusLabel.text
         }
         set {
             statusLabel.text = newValue
+        }
+    }
+    
+    var explain: String? {
+        get {
+            return explainLabel.text
+        }
+        set {
+            explainLabel.text = newValue
         }
     }
     

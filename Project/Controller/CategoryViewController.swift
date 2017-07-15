@@ -34,7 +34,6 @@ class CategoryViewController: BaseTableController {
             if let chapter = book["LastChapter"]?.dictionary?["Sort"]?.int {
                 cell.chapter = "第\(chapter)話"
             }
-            cell.explain = book["Explain"]?.string
             cell.cover = book["FrontCover"]?.string
         }
         return cell
@@ -50,6 +49,7 @@ class CategoryViewController: BaseTableController {
                 table.name = book?["Title"]?.string
                 table.author = book?["Author"]?.string
                 table.status = book?["SerializedState"]?.string
+                table.explain = book?["Explain"]?.string
                 table.id = book?["Id"]?.int ?? 0
             }
         }

@@ -14,7 +14,6 @@ class CategoryTableViewCell: UITableViewCell {
     
     @IBOutlet private weak var coverImageView: UIImageView!
     @IBOutlet private weak var titleLabel: UILabel!
-    @IBOutlet private weak var explainLabel: UILabel!
     @IBOutlet private weak var chapterLabel: UILabel!
     
     var title: String? {
@@ -23,15 +22,6 @@ class CategoryTableViewCell: UITableViewCell {
         }
         set {
             titleLabel.text = newValue
-        }
-    }
-    
-    var explain: String? {
-        get {
-            return explainLabel.text
-        }
-        set {
-            explainLabel.text = newValue
         }
     }
     

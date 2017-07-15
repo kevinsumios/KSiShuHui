@@ -6,12 +6,15 @@
 //  Copyright © 2017 Kevin iShuHui. All rights reserved.
 //
 
+import SwiftyJSON
 import UIKit
 import WebKit
 
 class ReadBookController: UIViewController, WKUIDelegate {
     
     var webView: WKWebView!
+    var book: Int?
+    var name: String?
     var id: Int?
     
     override func loadView() {
@@ -23,7 +26,13 @@ class ReadBookController: UIViewController, WKUIDelegate {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.title = name
         if let record = id, let readUrl = ApiHelper.shared.url(forName: .readBook) {
+            if let bookId = book {
+                UserDefaults.standard.set(record, forKey: "\(bookId)")
+                UserDefaults.standard.set(name, forKey: "\(record)")
+                UserDefaults.standard.synchronize()
+            }
             let myRequest = URLRequest(url: readUrl.appendingPathComponent("\(record).html"))
             webView.load(myRequest)
         }
