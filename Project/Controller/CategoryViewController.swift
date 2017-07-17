@@ -15,6 +15,10 @@ class CategoryViewController: BaseTableController {
     override func loadView() {
         super.loadView()
         api = ApiHelper.Name.getBook
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
         tabBarController?.title = tabBarItem.title
     }
     
