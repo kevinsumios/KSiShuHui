@@ -65,13 +65,23 @@ class BaseTableController: BaseViewController {
                                 }
                             }
                         }
+                    } else if let number = json.int {
+                        self.alert(message: "\(number)")
                     }
                     self.tableView.mj_footer?.endRefreshing()
             },
                 failure: { (error, response) in
+                    self.alert(message: error.localizedDescription)
                     self.tableView.mj_footer?.endRefreshing()
             })
         }
+    }
+    
+    func alert(message: String = "未知錯誤") {
+        let alert = UIAlertController(title: "注意", message: message, preferredStyle: .alert)
+        let okButton = UIAlertAction(title: "好的", style: .cancel, handler: nil)
+        alert.addAction(okButton)
+        self.present(alert, animated: true, completion: nil)
     }
 
     // MARK: - Table view data source
