@@ -15,6 +15,7 @@ class CategoryViewController: BaseTableController {
     override func loadView() {
         super.loadView()
         api = ApiHelper.Name.getBook
+        tableView.allowsSelectionDuringEditing = false
     }
     
     override func viewDidAppear(_ animated: Bool) {
@@ -43,6 +44,18 @@ class CategoryViewController: BaseTableController {
         return cell
     }
     
+    override func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
+        return true
+    }
+    
+    override func tableView(_ tableView: UITableView, editActionsForRowAt indexPath: IndexPath) -> [UITableViewRowAction]? {
+        let action = UITableViewRowAction(style: .default, title: "訂閱") { (action, indexPath) in
+            tableView.setEditing(false, animated: true)
+        }
+        action.backgroundColor = .orange
+        return [action]
+    }
+    
     // MARK: - Navigation
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
@@ -54,7 +67,7 @@ class CategoryViewController: BaseTableController {
                 table.author = book?["Author"]?.string
                 table.status = book?["SerializedState"]?.string
                 table.explain = book?["Explain"]?.string
-                table.id = book?["Id"]?.int ?? 0
+                table.id = book?["Id"]?.int16 ?? 0
             }
         }
     }

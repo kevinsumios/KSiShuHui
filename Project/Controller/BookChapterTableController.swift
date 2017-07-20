@@ -17,15 +17,10 @@ class BookChapterTableController: BaseTableController {
     var author: String?
     var status: String?
     var explain: String?
-    var id = 0
-    var historyId: Int {
+    var id: Int16 = 0
+    var historyChapter: Chapter? {
         get {
-            return UserDefaults.standard.integer(forKey: "\(id)")
-        }
-    }
-    var historyName: String? {
-        get {
-            return UserDefaults.standard.value(forKey: "\(historyId)") as? String
+            return Bookmark.chapter(of: id)
         }
     }
     
@@ -62,9 +57,9 @@ class BookChapterTableController: BaseTableController {
     }
     
     func showHistoryItem() {
-        if historyId > 0 {
+        if let chapter = historyChapter {
             let historyItem = UIBarButtonItem(
-                title: historyName,
+                title: chapter.chapterTitle,
                 style: .plain,
                 target: self,
                 action: #selector(goToHistory))
@@ -77,15 +72,13 @@ class BookChapterTableController: BaseTableController {
     }
 
     // MARK: - Table view data source
+    
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "bookChapterId", for: indexPath) as! BookChapterViewCell
-        if let chapter = data[indexPath.row].dictionary {
-            if let chapterNo = chapter["ChapterNo"]?.int {
-                let chapterType = chapter["ChapterType"]?.int ?? 0
-                cell.title = "第\(chapterNo)\(chapterType > 0 ? "卷" : "話")"
-            }
-            cell.explain = chapter["Title"]?.string
-            cell.cover = chapter["FrontCover"]?.string
+        if let chapter = Chapter.serialize(data[indexPath.row]) {
+            cell.title = chapter.chapterTitle
+            cell.explain = chapter.title
+            cell.cover = chapter.cover
         }
         return cell
     }
@@ -98,14 +91,11 @@ class BookChapterTableController: BaseTableController {
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "readBook", let readController = segue.destination as? ReadBookController {
+            readController.book = id
             if let selectedRow = tableView.indexPathForSelectedRow {
-                readController.id = data[selectedRow.row].dictionary?["Id"]?.int
-                readController.book = id
-                readController.name = (tableView.cellForRow(at: selectedRow) as! BookChapterViewCell).title
+                readController.chapter = Chapter.serialize(data[selectedRow.row])
             } else {
-                readController.id = historyId
-                readController.book = id
-                readController.name = historyName
+                readController.chapter = historyChapter
             }
         }
     }

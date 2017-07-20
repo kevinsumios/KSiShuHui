@@ -14,9 +14,8 @@ import WebKit
 class ReadBookController: UIViewController, WKUIDelegate, WKNavigationDelegate {
     
     var webView: WKWebView!
-    var book: Int?
-    var name: String?
-    var id: Int?
+    var book: Int16?
+    var chapter: Chapter?
     var loadingView: UIStackView?
     
     override func loadView() {
@@ -29,15 +28,13 @@ class ReadBookController: UIViewController, WKUIDelegate, WKNavigationDelegate {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.title = name
-        if let record = id, let readUrl = ApiHelper.shared.url(forName: .readBook) {
-            if let bookId = book {
-                UserDefaults.standard.set(record, forKey: "\(bookId)")
-                UserDefaults.standard.set(name, forKey: "\(record)")
-                UserDefaults.standard.synchronize()
-            }
-            let myRequest = URLRequest(url: readUrl.appendingPathComponent("\(record).html"))
+        if let realChap = chapter, let readUrl = ApiHelper.shared.url(forName: .readBook) {
+            self.title = realChap.chapterTitle
+            let myRequest = URLRequest(url: readUrl.appendingPathComponent("\(realChap.id).html"))
             webView.load(myRequest)
+            if let bookId = book {
+                Bookmark.saveEntity(bookId: bookId, chapter: realChap)
+            }
         }
         if let recognizer = navigationController?.barHideOnSwipeGestureRecognizer {
             webView.addGestureRecognizer(recognizer)

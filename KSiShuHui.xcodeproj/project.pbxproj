@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		48135999DB44968818EF9285 /* Pods_KSiShuHui.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 98CF40B3389304C2708365A7 /* Pods_KSiShuHui.framework */; };
 		4B6AC4891F17DFD90011665C /* BaseTableController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B6AC4881F17DFD90011665C /* BaseTableController.swift */; };
+		4B6AC48B1F2142EE0011665C /* Chapter+extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B6AC48A1F2142EE0011665C /* Chapter+extension.swift */; };
+		4B6AC48D1F2149F00011665C /* Bookmark+extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B6AC48C1F2149F00011665C /* Bookmark+extension.swift */; };
 		4B7277991F12A021009AC306 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B7277981F12A021009AC306 /* BaseViewController.swift */; };
 		4B72779F1F12A495009AC306 /* CategoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B72779E1F12A495009AC306 /* CategoryViewController.swift */; };
 		4B7277A11F12A79B009AC306 /* UpdateViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B7277A01F12A79B009AC306 /* UpdateViewController.swift */; };
@@ -57,6 +59,8 @@
 		3531BEAA369D890499CCD2C6 /* Pods-KSiShuHui.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-KSiShuHui.release.xcconfig"; path = "Pods/Target Support Files/Pods-KSiShuHui/Pods-KSiShuHui.release.xcconfig"; sourceTree = "<group>"; };
 		3D70966AFFB3FBA3853DEF83 /* Pods-KSiShuHuiTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-KSiShuHuiTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-KSiShuHuiTests/Pods-KSiShuHuiTests.debug.xcconfig"; sourceTree = "<group>"; };
 		4B6AC4881F17DFD90011665C /* BaseTableController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseTableController.swift; sourceTree = "<group>"; };
+		4B6AC48A1F2142EE0011665C /* Chapter+extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Chapter+extension.swift"; sourceTree = "<group>"; };
+		4B6AC48C1F2149F00011665C /* Bookmark+extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Bookmark+extension.swift"; sourceTree = "<group>"; };
 		4B7277981F12A021009AC306 /* BaseViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
 		4B72779E1F12A495009AC306 /* CategoryViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CategoryViewController.swift; sourceTree = "<group>"; };
 		4B7277A01F12A79B009AC306 /* UpdateViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UpdateViewController.swift; sourceTree = "<group>"; };
@@ -201,6 +205,8 @@
 			isa = PBXGroup;
 			children = (
 				4BA6EE811EE87D730098C4DA /* Project.xcdatamodeld */,
+				4B6AC48A1F2142EE0011665C /* Chapter+extension.swift */,
+				4B6AC48C1F2149F00011665C /* Bookmark+extension.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -543,10 +549,12 @@
 				4B9F7DDA1EEEF8FC009C13A5 /* Helper.swift in Sources */,
 				4BFEAED91F14085600762920 /* BookChapterViewCell.swift in Sources */,
 				4BFEAEDB1F15372F00762920 /* ReadBookController.swift in Sources */,
+				4B6AC48D1F2149F00011665C /* Bookmark+extension.swift in Sources */,
 				4B6AC4891F17DFD90011665C /* BaseTableController.swift in Sources */,
 				4BFEAED71F13FEAF00762920 /* BookChapterTableController.swift in Sources */,
 				4B72779F1F12A495009AC306 /* CategoryViewController.swift in Sources */,
 				4BDF650C1F124531003230A1 /* ApiHelper+Define.swift in Sources */,
+				4B6AC48B1F2142EE0011665C /* Chapter+extension.swift in Sources */,
 				4B7277A11F12A79B009AC306 /* UpdateViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
