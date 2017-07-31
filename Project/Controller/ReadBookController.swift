@@ -55,6 +55,7 @@ class ReadBookController: UIViewController, WKUIDelegate, WKNavigationDelegate {
     func addLoadingView() {
         let image = UIImageView(image: UIImage.fontAwesomeIcon(name: .star, textColor: .black, size: CGSize(width: 100, height: 100)))
         let label = UILabel()
+        label.textAlignment = .center
         label.text = "瘋狂加載中"
         loadingView = UIStackView(arrangedSubviews: [image, label])
         loadingView?.axis = .vertical
