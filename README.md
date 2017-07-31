@@ -1,13 +1,11 @@
 # 鼠绘漫画
 
-![screenshot1](Doc/screenshot1.png)
-![screenshot2](Doc/screenshot2.png)
-![screenshot3](Doc/screenshot3.png)
-![screenshot4](Doc/screenshot4.png)
+<img src="Doc/screenshot1.png" width="300"> <img src="Doc/screenshot2.png" width="300">
+
+<img src="Doc/screenshot3.png" width="300"> <img src="Doc/screenshot4.png" width="300">
 
 
-
-##Require
+## Require
 
 1. Xcode 8.3+, Swift 2.3+
 2. Cocoapods 1.1.1+
