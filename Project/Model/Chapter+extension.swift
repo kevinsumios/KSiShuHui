@@ -37,7 +37,10 @@ extension Chapter {
             chapter?.cover = data["FrontCover"]?.string
             chapter?.chapterNo = data["ChapterNo"]?.int16 ?? 0
             chapter?.chapterType = data["ChapterType"]?.int16 ?? 0
-            chapter?.refreshTime = NSDate(timeIntervalSince1970: data["RefreshTime"]?.double ?? 0)
+            let refresh = data["RefreshTime"]?.string ?? ""
+            let range = refresh.index(refresh.startIndex, offsetBy: 6)..<refresh.index(refresh.endIndex, offsetBy: -2)
+            let refreshTime = (Double(refresh.substring(with: range)) ?? 0)/1000
+            chapter?.refreshTime = NSDate(timeIntervalSince1970: refreshTime)
             return chapter
         }
         return nil

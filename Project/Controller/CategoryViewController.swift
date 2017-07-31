@@ -21,6 +21,7 @@ class CategoryViewController: BaseTableController {
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
         tabBarController?.title = tabBarItem.title
+        tableView.reloadData()
     }
     
     override func loadData() {
@@ -40,6 +41,7 @@ class CategoryViewController: BaseTableController {
                 cell.chapter = "第\(chapter)話"
             }
             cell.cover = book["FrontCover"]?.string
+            cell.subscribed = Subscription.isSubscribe(bookId: book["Id"]?.int16)
         }
         return cell
     }
@@ -49,11 +51,20 @@ class CategoryViewController: BaseTableController {
     }
     
     override func tableView(_ tableView: UITableView, editActionsForRowAt indexPath: IndexPath) -> [UITableViewRowAction]? {
-        let action = UITableViewRowAction(style: .default, title: "訂閱") { (action, indexPath) in
-            tableView.setEditing(false, animated: true)
+        if let cell = tableView.cellForRow(at: indexPath) as? CategoryTableViewCell {
+            let title = cell.subscribed ? "退訂" : "訂閱"
+            let action = UITableViewRowAction(style: .default, title: title, handler: { (action, indexPath) in
+                if let bookId = self.data[indexPath.row].dictionary?["Id"]?.int16 {
+                    Subscription.subscribe(bookId: bookId, YesOrNo: !cell.subscribed)
+                }
+                cell.subscribed = !cell.subscribed
+                tableView.setEditing(false, animated: true)
+            })
+            action.backgroundColor = cell.subscribed ? .red : .orange
+            return [action]
+        } else {
+            return []
         }
-        action.backgroundColor = .orange
-        return [action]
     }
     
     // MARK: - Navigation

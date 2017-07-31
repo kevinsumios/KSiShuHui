@@ -16,6 +16,7 @@
 		4B7277A11F12A79B009AC306 /* UpdateViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B7277A01F12A79B009AC306 /* UpdateViewController.swift */; };
 		4B7277A51F12B261009AC306 /* CategoryTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B7277A41F12B261009AC306 /* CategoryTableViewCell.swift */; };
 		4B7277AA1F13F1C4009AC306 /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B7277A91F13F1C4009AC306 /* TabBarController.swift */; };
+		4B7424231F2D251600C94BCF /* Subscription+extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B7424221F2D251600C94BCF /* Subscription+extension.swift */; };
 		4B9F7DDA1EEEF8FC009C13A5 /* Helper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B9F7DD91EEEF8FC009C13A5 /* Helper.swift */; };
 		4B9F7DDC1EEEF932009C13A5 /* Config.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B9F7DDB1EEEF932009C13A5 /* Config.swift */; };
 		4BA6EE0D1EE87B7B0098C4DA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BA6EE0C1EE87B7B0098C4DA /* AppDelegate.swift */; };
@@ -28,6 +29,7 @@
 		4BDF650A1F124471003230A1 /* ApiHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BDF65091F124471003230A1 /* ApiHelper.swift */; };
 		4BDF650C1F124531003230A1 /* ApiHelper+Define.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BDF650B1F124531003230A1 /* ApiHelper+Define.swift */; };
 		4BDF650E1F124559003230A1 /* Api.plist in Resources */ = {isa = PBXBuildFile; fileRef = 4BDF650D1F124559003230A1 /* Api.plist */; };
+		4BED1A9A1F2E3B2F00EEC4F6 /* UpdateTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BED1A991F2E3B2F00EEC4F6 /* UpdateTableViewCell.swift */; };
 		4BFEAED51F13FD5500762920 /* BookChapterHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BFEAED41F13FD5500762920 /* BookChapterHeaderView.swift */; };
 		4BFEAED71F13FEAF00762920 /* BookChapterTableController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BFEAED61F13FEAF00762920 /* BookChapterTableController.swift */; };
 		4BFEAED91F14085600762920 /* BookChapterViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BFEAED81F14085600762920 /* BookChapterViewCell.swift */; };
@@ -66,6 +68,7 @@
 		4B7277A01F12A79B009AC306 /* UpdateViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UpdateViewController.swift; sourceTree = "<group>"; };
 		4B7277A41F12B261009AC306 /* CategoryTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CategoryTableViewCell.swift; sourceTree = "<group>"; };
 		4B7277A91F13F1C4009AC306 /* TabBarController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
+		4B7424221F2D251600C94BCF /* Subscription+extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Subscription+extension.swift"; sourceTree = "<group>"; };
 		4B9F7DD91EEEF8FC009C13A5 /* Helper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Helper.swift; sourceTree = "<group>"; };
 		4B9F7DDB1EEEF932009C13A5 /* Config.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Config.swift; sourceTree = "<group>"; };
 		4BA25DD1BF088A3552C77038 /* Pods-KSiShuHuiUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-KSiShuHuiUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-KSiShuHuiUITests/Pods-KSiShuHuiUITests.release.xcconfig"; sourceTree = "<group>"; };
@@ -85,6 +88,7 @@
 		4BDF65091F124471003230A1 /* ApiHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ApiHelper.swift; sourceTree = "<group>"; };
 		4BDF650B1F124531003230A1 /* ApiHelper+Define.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "ApiHelper+Define.swift"; sourceTree = "<group>"; };
 		4BDF650D1F124559003230A1 /* Api.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Api.plist; sourceTree = "<group>"; };
+		4BED1A991F2E3B2F00EEC4F6 /* UpdateTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UpdateTableViewCell.swift; sourceTree = "<group>"; };
 		4BFEAED41F13FD5500762920 /* BookChapterHeaderView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BookChapterHeaderView.swift; sourceTree = "<group>"; };
 		4BFEAED61F13FEAF00762920 /* BookChapterTableController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BookChapterTableController.swift; sourceTree = "<group>"; };
 		4BFEAED81F14085600762920 /* BookChapterViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BookChapterViewCell.swift; sourceTree = "<group>"; };
@@ -207,6 +211,7 @@
 				4BA6EE811EE87D730098C4DA /* Project.xcdatamodeld */,
 				4B6AC48A1F2142EE0011665C /* Chapter+extension.swift */,
 				4B6AC48C1F2149F00011665C /* Bookmark+extension.swift */,
+				4B7424221F2D251600C94BCF /* Subscription+extension.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -217,6 +222,7 @@
 				4BFEAED41F13FD5500762920 /* BookChapterHeaderView.swift */,
 				4BFEAED81F14085600762920 /* BookChapterViewCell.swift */,
 				4B7277A41F12B261009AC306 /* CategoryTableViewCell.swift */,
+				4BED1A991F2E3B2F00EEC4F6 /* UpdateTableViewCell.swift */,
 				4BA6EE851EE87D8E0098C4DA /* LaunchScreen.storyboard */,
 				4BA6EE861EE87D8E0098C4DA /* Main.storyboard */,
 			);
@@ -544,8 +550,10 @@
 				4B7277AA1F13F1C4009AC306 /* TabBarController.swift in Sources */,
 				4B9F7DDC1EEEF932009C13A5 /* Config.swift in Sources */,
 				4BA6EE831EE87D730098C4DA /* Project.xcdatamodeld in Sources */,
+				4BED1A9A1F2E3B2F00EEC4F6 /* UpdateTableViewCell.swift in Sources */,
 				4B7277991F12A021009AC306 /* BaseViewController.swift in Sources */,
 				4B7277A51F12B261009AC306 /* CategoryTableViewCell.swift in Sources */,
+				4B7424231F2D251600C94BCF /* Subscription+extension.swift in Sources */,
 				4B9F7DDA1EEEF8FC009C13A5 /* Helper.swift in Sources */,
 				4BFEAED91F14085600762920 /* BookChapterViewCell.swift in Sources */,
 				4BFEAEDB1F15372F00762920 /* ReadBookController.swift in Sources */,
@@ -634,6 +642,9 @@
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				MOMC_NO_INVERSE_RELATIONSHIP_WARNINGS = NO;
+				MOMC_NO_WARNINGS = NO;
+				MOMC_SUPPRESS_INVERSE_TRANSIENT_ERROR = NO;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -680,6 +691,9 @@
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				MOMC_NO_INVERSE_RELATIONSHIP_WARNINGS = NO;
+				MOMC_NO_WARNINGS = NO;
+				MOMC_SUPPRESS_INVERSE_TRANSIENT_ERROR = NO;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";

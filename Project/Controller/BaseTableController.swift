@@ -18,6 +18,7 @@ class BaseTableController: BaseViewController {
     var index = 0
     var api: ApiHelper.Name?
     var parameter = Parameters()
+    var didFinishLoad: (() -> ())?
     
     override func loadView() {
         api = nil
@@ -55,6 +56,7 @@ class BaseTableController: BaseViewController {
                     if let result = json.dictionary?["Return"]?.dictionary {
                         if let array = result["List"]?.array {
                             self.data.append(contentsOf: array)
+                            self.didFinishLoad?()
                             self.tableView.reloadData()
                             if let count = result["ListCount"]?.int, let size = result["PageSize"]?.int {
                                 if (self.index+1)*size > count {
@@ -68,10 +70,12 @@ class BaseTableController: BaseViewController {
                     } else if let number = json.int {
                         self.alert(message: "\(number)")
                     }
+                    self.tableView.mj_header?.endRefreshing()
                     self.tableView.mj_footer?.endRefreshing()
             },
                 failure: { (error, response) in
                     self.alert(message: error.localizedDescription)
+                    self.tableView.mj_header?.endRefreshing()
                     self.tableView.mj_footer?.endRefreshing()
             })
         }

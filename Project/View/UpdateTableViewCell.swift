@@ -1,21 +1,19 @@
 //
-//  CategoryTableViewCell.swift
-//  Project
+//  UpdateTableViewCell.swift
+//  KSiShuHui
 //
-//  Created by Kevin Sum on 10/7/2017.
+//  Created by Kevin Sum on 31/7/2017.
 //  Copyright © 2017 Kevin iShuHui. All rights reserved.
 //
 
 import UIKit
-import FontAwesome_swift
-import SDWebImage
 
-class CategoryTableViewCell: UITableViewCell {
+class UpdateTableViewCell: UITableViewCell {
     
     @IBOutlet private weak var coverImageView: UIImageView!
     @IBOutlet private weak var titleLabel: UILabel!
-    @IBOutlet private weak var chapterLabel: UILabel!
-    @IBOutlet private weak var subscriptIcon: UIImageView!
+    @IBOutlet private weak var descLabel: UILabel!
+    @IBOutlet weak var updateLabel: UILabel!
     
     var title: String? {
         get {
@@ -26,12 +24,12 @@ class CategoryTableViewCell: UITableViewCell {
         }
     }
     
-    var chapter: String? {
+    var desc: String? {
         get {
-            return chapterLabel.text
+            return descLabel.text
         }
         set {
-            chapterLabel.text = newValue
+            descLabel.text = newValue
         }
     }
     
@@ -44,17 +42,15 @@ class CategoryTableViewCell: UITableViewCell {
         }
     }
     
-    var subscribed: Bool = false {
-        didSet {
-            if (subscribed) {
-                subscriptIcon.isHidden = false
-                subscriptIcon.image = UIImage.fontAwesomeIcon(name: .bookmark, textColor: .orange, size: subscriptIcon.frame.size)
-            } else {
-                subscriptIcon.isHidden = true
-            }
+    var updateStr: String? {
+        get {
+            return updateLabel.text
+        }
+        set {
+            updateLabel.text = newValue
         }
     }
-    
+
     override func awakeFromNib() {
         super.awakeFromNib()
     }

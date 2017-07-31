@@ -17,9 +17,13 @@
         <attribute name="refreshTime" optional="YES" attributeType="Date" usesScalarValueType="NO" syncable="YES"/>
         <attribute name="title" optional="YES" attributeType="String" syncable="YES"/>
     </entity>
+    <entity name="Subscription" representedClassName="Subscription" syncable="YES" codeGenerationType="class">
+        <attribute name="bookId" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+    </entity>
     <elements>
         <element name="Api" positionX="-45" positionY="0" width="128" height="90"/>
-        <element name="Chapter" positionX="-45" positionY="27" width="128" height="135"/>
         <element name="Bookmark" positionX="-36" positionY="54" width="128" height="75"/>
+        <element name="Chapter" positionX="-45" positionY="27" width="128" height="135"/>
+        <element name="Subscription" positionX="-45" positionY="63" width="128" height="60"/>
     </elements>
 </model>

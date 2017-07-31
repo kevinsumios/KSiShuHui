@@ -15,6 +15,8 @@
 	<string>GetAllBook</string>
 	<key>getChapter</key>
 	<string>GetChapterList</string>
+	<key>getUpdate</key>
+	<string>GetLastChapterForBookIds</string>
 	<key>readBook</key>
 	<string>ReadComicBooksToIsoV1</string>
 </dict>

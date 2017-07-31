@@ -15,6 +15,7 @@ extension ApiHelper {
         case version
         case getBook
         case getChapter
+        case getUpdate
         case readBook
     }
     

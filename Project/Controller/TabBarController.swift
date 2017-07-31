@@ -16,9 +16,12 @@ class TabBarController: UITabBarController {
         super.viewDidLoad()
         let categoryConfig = [
             [
+                "title": "最近更新"
+            ],
+            [
                 "id": 3,
                 "title": "鼠繪漫畫"
-                ],
+            ],
             [
                 "id": 4,
                 "title": "熱血漫畫"
@@ -32,6 +35,10 @@ class TabBarController: UITabBarController {
                     category.tabBarItem.selectedImage = UIImage.fontAwesomeIcon(name: .star, textColor: .gray, size: CGSize(width: 30, height: 30))
                     category.tabBarItem.title = categoryConfig[index]["title"] as? String
                     category.categoryId = categoryConfig[index]["id"] as? Int ?? 0
+                    index += 1
+                } else if let update = tabController as? UpdateViewController {
+                    update.tabBarItem.image = UIImage.fontAwesomeIcon(name: .refresh, textColor: .gray, size: CGSize(width: 30, height: 30))
+                    update.tabBarItem.title = categoryConfig[index]["title"] as? String
                     index += 1
                 }
             }

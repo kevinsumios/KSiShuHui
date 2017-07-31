@@ -10,6 +10,7 @@ PODS:
     - SDWebImage/Core (= 4.0.0)
   - SDWebImage/Core (4.0.0)
   - Siren (2.0.2)
+  - SwiftDate (4.1.2)
   - SwiftyBeaver (1.2.2)
   - SwiftyJSON (3.1.4)
   - SwiftyTimer (2.0.0)
@@ -22,6 +23,7 @@ DEPENDENCIES:
   - MJRefresh
   - SDWebImage
   - Siren
+  - SwiftDate
   - SwiftyBeaver
   - SwiftyJSON
   - SwiftyTimer
@@ -34,10 +36,11 @@ SPEC CHECKSUMS:
   MJRefresh: b96cdb21c4aa75a7b07654311ab2f315c497e806
   SDWebImage: 76a6348bdc74eb5a55dd08a091ef298e56b55e41
   Siren: 33994aad31aab24344689b3a918d0a9d9eede2e2
+  SwiftDate: 2dfdebd4f67ae71c9c3e2413ee3c56947f302858
   SwiftyBeaver: 90a39e3dc5136b7285f2e4c870b107e3933b8b84
   SwiftyJSON: c2842d878f95482ffceec5709abc3d05680c0220
   SwiftyTimer: 2efd74b060d69ad4f1496baf5bbedbe132125fcf
 
-PODFILE CHECKSUM: cf07940304bff30e459601eccd1383a3d8a74bf5
+PODFILE CHECKSUM: 23951037922835a223177be2459edec6b0f39ceb
 
 COCOAPODS: 1.1.1

@@ -15,6 +15,7 @@ target 'KSiShuHui' do
   pod 'Siren'
   pod 'SDWebImage'
   pod 'SwiftyBeaver'
+  pod 'SwiftDate'
   pod 'SwiftyJSON'
   pod 'SwiftyTimer'
 
