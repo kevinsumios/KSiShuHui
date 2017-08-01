@@ -87,14 +87,16 @@ class UpdateViewController: BaseTableController {
         return true
     }
     
-    override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
-        if editingStyle == .delete {
-            if let bookId = data[indexPath.row].dictionary?["BookId"]?.int16 {
+    override func tableView(_ tableView: UITableView, editActionsForRowAt indexPath: IndexPath) -> [UITableViewRowAction]? {
+        let action = UITableViewRowAction(style: .default, title: "退訂", handler: { (action, indexPath) in
+            if let bookId = self.data[indexPath.row].dictionary?["BookId"]?.int16 {
                 Subscription.subscribe(bookId: bookId, YesOrNo: false)
             }
-            data.remove(at: indexPath.row)
+            self.data.remove(at: indexPath.row)
             tableView.deleteRows(at: [indexPath], with: .left)
-        }
+        })
+        action.backgroundColor = .red
+        return [action]
     }
     
     // MARK: - Navigation
